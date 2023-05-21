@@ -14,29 +14,29 @@ const LineChart = ({coinHistory, currentPrice, coinName}) => {
         coinTimestamp.push(new Date(coinHistory?.data.histoy[i].coinTimestamp).toLocaleDateString())
     }
     //this works only on premium plans
-    // const data = {
-    //     labels: coinTimestamp,
-    //     datasets: [
-    //         {
-    //             label: 'price in USD ',
-    //             data: coinprice, 
-    //             fill: false, 
-    //             backgroundColor: '#0071bd', 
-    //             borderColor: '#0071bd'
-    //         }
-    //     ]
-    // }
-    // const options = {
-    //     scales: {
-    //         yAxes: [
-    //             {
-    //                 ticks: {
-    //                     beginAtZero: true
-    //                 }
-    //             }
-    //         ]
-    //     }
-    // }
+    const data = {
+        labels: coinTimestamp,
+        datasets: [
+            {
+                label: 'price in USD ',
+                data: coinprice, 
+                fill: false, 
+                backgroundColor: '#0071bd', 
+                borderColor: '#0071bd'
+            }
+        ]
+    }
+    const options = {
+        scales: {
+            yAxes: [
+                {
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }
+            ]
+        }
+    }
 
   return (
     <>
